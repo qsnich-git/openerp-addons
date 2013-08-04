@@ -17,7 +17,7 @@
       <field name="model">hospital.prefix</field>
       <field name="arch" type="xml">
         <tree string="Hospital Prefix">
-          <field name="name" string="Prefix" />
+          <field name="name" string="คำนำหน้าชื่อ" />
         </tree>
       </field>
     </record>
@@ -27,7 +27,7 @@
       <field name="model">hospital.prefix</field>
       <field name="arch" type="xml">
         <form string="Hospital Prefix">
-          <field name="name" string="Prefix" />
+          <field name="name" string="คำนำหน้าชื่อ" />
         </form>
       </field>
     </record>
@@ -38,12 +38,12 @@
       <field name="view_mode" >tree,form</field>
     </record>
 
-
     <record model="ir.ui.menu" id="menu_hospital_prefix">
-      <field name="name">Prefix</field>
+      <field name="name">คำนำหน้าชื่อ</field>
       <field name="sequence" eval="10" />
       <field name="parent_id" ref="menu_hospital_configuration" />
       <field name="action" ref="action_hospital_prefix" />
     </record>
   </data>
 </openerp>
+
