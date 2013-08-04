@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.menu" id="menu_hospital" >
+      <field name="name">Hospital</field>
+      <field name="sequence" eval="100" />
+    </record>
+
+    <record model="ir.ui.menu" id="menu_hospital_configuration">
+      <field name="name">Configuration</field>
+      <field name="sequence" eval="10" />
+      <field name="parent_id" ref="menu_hospital" />
+    </record>
+
+    <record model="ir.ui.view" id="view_hospital_prefix_tree">
+      <field name="name">hospital.prefix.tree</field>
+      <field name="model">hospital.prefix</field>
+      <field name="arch" type="xml">
+        <tree string="Hospital Prefix">
+          <field name="name" string="Prefix" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hospital_prefix_form">
+      <field name="name">hospital.prefix.form</field>
+      <field name="model">hospital.prefix</field>
+      <field name="arch" type="xml">
+        <form string="Hospital Prefix">
+          <field name="name" string="Prefix" />
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hospital_prefix">
+      <field name="name">Prefix</field>
+      <field name="res_model" >hospital.prefix</field>
+      <field name="view_mode" >tree,form</field>
+    </record>
+
+
+    <record model="ir.ui.menu" id="menu_hospital_prefix">
+      <field name="name">Prefix</field>
+      <field name="sequence" eval="10" />
+      <field name="parent_id" ref="menu_hospital_configuration" />
+      <field name="action" ref="action_hospital_prefix" />
+    </record>
+  </data>
+</openerp>
