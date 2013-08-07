@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_hospital_patient_tree">
+      <field name="name">hospital.patient.tree</field>
+      <field name="model">hospital.patient</field>
+      <field name="arch" type="xml">
+        <tree string="Patient">
+          <field name="name" />
+          <field name="prefix_id" />
+          <field name="firstname" />
+          <field name="lastname" />
+          <field name="sex" />
+          <field name="dob" />
+          <field name="age" />
+          <field name="active" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hospital_patient_form">
+      <field name="name">hospital.patient.form</field>
+      <field name="model">hospital.patient</field>
+      <field name="arch" type="xml">
+        <form string="Patient">
+          <field name="name" />
+          <field name="prefix_id" />
+          <field name="firstname" />
+          <field name="lastname" />
+          <field name="sex" />
+          <field name="dob" />
+          <field name="active" />
+        </form>    
+      </field>
+    </record>        
+        
+    <record model="ir.ui.view" id="view_hospital_patient_search">
+      <field name="name">hospital.patient.search</field>
+      <field name="model">hospital.patient</field>
+      <field name="arch" type="xml">
+        <search string="Patient">
+          <field name="name" />
+          <field name="prefix_id" />
+          <field name="firstname" />
+          <field name="lastname" />
+          <field name="sex" />
+          <field name="active" />
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hospital_patient">
+      <field name="name">Patient</field>
+      <field name="res_model" >hospital.patient</field>
+      <field name="view_mode" >tree,form</field>
+    </record>
+
+    <record model="ir.ui.menu" id="menu_hospital_patient">
+      <field name="name">Patient</field>
+      <field name="sequence" eval="10" />
+      <field name="parent_id" ref="menu_hospital_configuration" />
+      <field name="action" ref="action_hospital_patient" />
+    </record>
+  </data>
+</openerp>
+

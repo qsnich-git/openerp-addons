@@ -10,6 +10,7 @@
     'demo' : [],
     'installable': True,
     'update_xml': [
-        'hospital_menu.xml'
+        'hospital_menu.xml',
+        'patient_view.xml',
     ]
 }
